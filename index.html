@@ -19,10 +19,7 @@
                 data-target="#task-form-modal">Add
                 Task</button>
             <button id="remove-tasks" class="btn btn-block btn-danger">Delete All Tasks</button>
-            <p class="mt-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptas architecto ipsa
-                excepturi aut non
-                laudantium sequi fugit officiis optio deleniti asperiores rem eius laborum maxime blanditiis culpa, quis
-                iste?
+            <p class="mt-auto">A one hour workout is 4% of your day. No excuses.
             </p>
         </header>
         <main class="col-12 col-lg-9">
@@ -43,7 +40,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="task-form-modal">New Work Out</h5>
+                    <h5 class="modal-title" id="task-form-modal">New Exercise:</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -51,11 +48,15 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <label for="modalTaskDescription">Task description</label>
+                            <label for="modalTaskDescription">Work out Type:</label>
                             <textarea id="modalTaskDescription" rows="3"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="modalDueDate">Due date</label>
+                            <input type="text" id="modalDueDate" placeholder="mm/dd/yyyy" autocomplete="off" />
+                        </div>
+                        <div class="form-group">
+                            <label for="modalDueDate">Timer:</label>
                             <input type="text" id="modalDueDate" placeholder="mm/dd/yyyy" autocomplete="off" />
                         </div>
                     </form>
@@ -69,12 +70,8 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-
         <script src="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"></script>
-
-
-
-        "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 
         <script src="./assets/js/script.js"></script>

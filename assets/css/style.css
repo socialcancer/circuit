@@ -1,0 +1,18 @@
+/***  Universal Selector ***/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/** Body Selectors ***/
+body {
+  background-color: black;
+}
+h2 {
+  color: whitesmoke;
+}
+
+/** Elements **/
+.list-group-item {
+  background-color: #404040 !important;
+}
