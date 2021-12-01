@@ -1,4 +1,4 @@
-# Password Generator
+# Circuit Workout Application
 
 A simple password generator that creates a password when a user clicks the
 generate password button
