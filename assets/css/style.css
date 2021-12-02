@@ -11,6 +11,9 @@ body {
 h2 {
   color: whitesmoke;
 }
+li {
+  color: whitesmoke;
+}
 
 /** Elements **/
 .list-group-item {
