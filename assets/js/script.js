@@ -2,10 +2,8 @@ var tasks = {};
 
 var createTask = function (taskText, taskDate, taskList) {
     // create elements that make up a task item
-    var taskLi = $("<li>")
-        .addClass("list-group-item")
-        .addClass("draggable");
-
+    var taskLi = $("<li>").addClass("list-group-item");
+    
     var taskSpan = $("<span>")
         .addClass("badge badge-primary badge-pill")
         .text(taskDate);
@@ -66,10 +64,10 @@ $("#task-form-modal").on("shown.bs.modal", function () {
 $("#task-form-modal .btn-primary").click(function () {
     // get form values
     var taskText = $("#modalTaskDescription").val();
-    var taskDate = $("#modalDueDate").val();
+    var taskTimer = $("#modalTimer").val();
 
-    if (taskText && taskDate) {
-        createTask(taskText, taskDate, "toDo");
+    if (taskText && taskTimer) {
+        createTask(taskText, taskTimer, "toDo");
 
         // close modal
         $("#task-form-modal").modal("hide");
@@ -77,7 +75,7 @@ $("#task-form-modal .btn-primary").click(function () {
         // save in tasks array
         tasks.toDo.push({
             text: taskText,
-            date: taskDate
+            timer: taskTimer
         });
 
         saveTasks();

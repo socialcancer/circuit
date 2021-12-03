@@ -6,13 +6,43 @@
 }
 /** Body Selectors ***/
 body {
+  font-family: "Darker Grotesque", sans-serif;
   background-color: black;
 }
+header {
+  max-height: 15%;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 h2 {
+  font-weight: lighter;
+  color: whitesmoke;
+}
+li {
   color: whitesmoke;
 }
 
 /** Elements **/
 .list-group-item {
   /* background-color: #404040 !important; */
+}
+button#create-task {
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+button#remove-tasks {
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+}
+#logo {
+  font-weight: bold;
 }

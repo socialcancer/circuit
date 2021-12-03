@@ -6,27 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Circuit | Workout App</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Darker Grotesque">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Circuit</title>
+
+    <script>(function (d, s, id) { var js, pjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//www.tickcounter.com/static/js/loader.js"; pjs.parentNode.insertBefore(js, pjs); }(document, "script", "tickcounter-sdk"));</script>
+
 </head>
 
 <body>
 
-    <div class="row min-vh-100 no-gutters">
-        <header class="col-12 col-lg-3 bg-dark text-light d-flex flex-column p-4 p-lg-3">
-            <h1 class="text-center">Circuit</h1>
-            <button id="create-task" class="btn btn-block btn-success" data-toggle="modal"
-                data-target="#task-form-modal">Add
-                Task</button>
-            <button id="remove-tasks" class="btn btn-block btn-danger">Delete All Tasks</button>
-            <p class="mt-auto">A one hour workout is 4% of your day. No excuses.
-            </p>
+    <div class="container">
+        <header class="row valign-wrapper">
+            <div class="row col s12 m6 l6">
+                <h1 id="logo" class="white-text col s12 left-align">Circuit</h1>
+            </div>
+            <div class="col s12 right-align">
+                <button id="create-task" class="red white-text" data-toggle="modal" data-target="#task-form-modal">Add
+                    Exercise
+                </button>
+                <button id="remove-tasks" class="red white-text">Remove Exercises</button>
+            </div>
         </header>
-        <main class="col-12 col-lg-9">
-            <div class="m-5 row justify-content-around">
+        <main class="row">
+            <div class="col s12">
                 <!-- todo start -->
-                <div class="col">
-                    <h2>Exercise </h2>
+                <div class="col s12">
+                    <h2 class="col s12">My Workouts </h2>
                     <ul id="list-toDo" class="list-group"> </ul>
                 </div>
                 <!-- todo end -->
@@ -34,49 +41,50 @@
         </main>
     </div>
 
+
     <!-- Modal -->
     <div class="modal fade" id="task-form-modal" tabindex="-1" role="dialog" aria-labelledby="task-form-modal"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="task-form-modal">New Exercise:</h5>
+                    <h5 class="modal-title" id="task-form-modal">New Exercise</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
+                    <!-- Timer -->
+                    <a data-type="countdown" data-name="Exercise Ends in:" data-bg_color="#ffffff"
+                        data-name_color="#000000" data-border_color="#888888" data-dt="2022-01-01 12:30:55"
+                        data-timezone="America/Chicago"
+                        style="display: block; width: 100%; position: relative; padding-bottom: 25%" class="tickcounter"
+                        href="//www.tickcounter.com">Countdown</a>
                     <form>
                         <div class="form-group">
-                            <label for="modalTaskDescription">Work out Type:</label>
-                            <textarea id="modalTaskDescription" rows="3"></textarea>
+                            <label for="modalTaskDescription"></label>
+                            <textarea id="modalTaskDescription" placeholder="Execise Name" rows="3"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="modalDueDate">Due date</label>
-                            <input type="text" id="modalDueDate" placeholder="mm/dd/yyyy" autocomplete="off" />
+                            <label for="modalTimer"></label>
+                            <input type="number" id="modalTimer" placeholder="Reps/Seconds" autocomplete="off" />
                         </div>
-                        <!-- <div class="form-group">
-                            <label for="modalDueDate">Timer:</label>
-                            <input type="text" id="modalDueDate" placeholder="mm/dd/yyyy" autocomplete="off" />
-                        </div> -->
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save Task</button>
+                    <button data-dismiss="modal">Cancel</button>
+                    <button class="button-primary">Add</button>
                 </div>
             </div>
         </div>
+    </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"
-            integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
 
 
-        <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
