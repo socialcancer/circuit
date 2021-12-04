@@ -21,7 +21,7 @@
                 <img id="logomark" class="col s4 left-align" src="circuit-app-sample.png">
             </div>
             <div class="col s6 offset-6 right-align">
-                <button id="create-task" class="red white-text" data-toggle="modal"
+                <button data-target="modal1" id="create-task" class="red white-text modal-trigger" data-toggle="modal"
                     data-target="#task-form-modal">Add Exercise
                 </button>
                 <button id="remove-tasks" class="red white-text">Remove Exercises</button>
@@ -32,15 +32,28 @@
                 <!-- todo start -->
                 <div class="col s12">
                     <h2 class="col s12">My Workouts </h2>
-                    <ul id="list-toDo" class="list-group"> </ul>
+                    <ul id="exercise-list" class="list-group"> </ul>
                 </div>
                 <!-- todo end -->
             </div>
         </main>
     </div>
 
+
+  <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>New Exercise</h4>
+            <input id="exercise" type="text" placeholder="Exercise Name">
+            <input id="duration" type="number" placeholder="Seconds">
+        </div>
+        <div class="modal-footer">
+        <a id="addButton" href="#!" class="modal-close waves-effect waves-green btn-flat">Add</a>
+        </div>
+  </div>
+          
     <!-- Modal -->
-    <div class="modal fade" id="task-form-modal" tabindex="-1" role="dialog" aria-labelledby="task-form-modal"
+    <!-- <div class="modal fade" id="task-form-modal" tabindex="-1" role="dialog" aria-labelledby="task-form-modal"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -68,15 +81,13 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
         <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
-
-
-        <script src="./assets/js/script.js"></script>
-</body>
+        <!-- <script src="assets/js/script.js"></script> -->
+        <script src="assets/js/circuit.js"></script>
 
 </html>
