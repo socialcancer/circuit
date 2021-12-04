@@ -18,6 +18,8 @@ header {
 h2 {
   font-weight: lighter;
   color: whitesmoke;
+  margin: auto;
+  padding: auto;
 }
 li {
   color: whitesmoke;
