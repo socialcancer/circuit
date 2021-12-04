@@ -5,10 +5,20 @@
   box-sizing: border-box;
 }
 /** Body Selectors ***/
+<<<<<<< HEAD
 /* body {
+=======
+body {
+>>>>>>> e069d4fdce7052ac2301815a78d653d66dc6a230
   font-family: "Darker Grotesque", sans-serif;
   background-color: black;
 } */
+header {
+  max-height: 15%;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 header {
   max-height: 15%;
   align-content: center;
@@ -26,6 +36,25 @@ li {
 /** Elements **/
 .list-group-item {
   /* background-color: #404040 !important; */
+}
+button#create-task {
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+button#remove-tasks {
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+}
+#logo {
+  font-weight: bold;
 }
 button#create-task {
   font-family: "Darker Grotesque", sans-serif;
