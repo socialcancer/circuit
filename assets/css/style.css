@@ -5,10 +5,10 @@
   box-sizing: border-box;
 }
 /** Body Selectors ***/
-body {
+/* body {
   font-family: "Darker Grotesque", sans-serif;
   background-color: black;
-}
+} */
 header {
   max-height: 15%;
   align-content: center;
