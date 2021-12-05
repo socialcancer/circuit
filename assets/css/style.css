@@ -1,10 +1,15 @@
+/*** Custom fonts ***/
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,900,700italic,700,600italic,600,400italic");
+
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300&display=swap");
+
 /***  Universal Selector ***/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/** Body Selectors ***/
+/*** Body Selectors ***/
 body {
   font-family: "Darker Grotesque", sans-serif;
   background-color: black;
@@ -22,7 +27,8 @@ h2 {
 li {
   color: whitesmoke;
 }
-/** Elements **/
+​
+/*** Elements ***/
 .list-group-item {
   background-color: #404040 !important;
 }
@@ -35,9 +41,6 @@ button#add-exercise {
   margin-right: 10px;
   margin-bottom: 10px;
 }
-button {
-  cursor: pointer;
-}
 button#delete-exercises {
   font-family: "Darker Grotesque", sans-serif;
   font-size: 1.25rem;
@@ -47,4 +50,38 @@ button#delete-exercises {
 }
 #logo {
   font-weight: bold;
+}
+.show {
+  display: block;
+}
+
+/*** Styles for timer ***/
+div {
+  display: inline-block;
+  line-height: 1;
+  padding: 20px;
+  font-size: 40px;
+}
+
+span {
+  display: block;
+  font-size: 20px;
+  color: white;
+}
+
+#days {
+  font-size: 100px;
+  color: #db4844;
+}
+#hours {
+  font-size: 100px;
+  color: #f07c22;
+}
+#minutes {
+  font-size: 100px;
+  color: #f6da74;
+}
+#seconds {
+  font-size: 50px;
+  color: #abcd58;
 }
