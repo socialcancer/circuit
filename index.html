@@ -5,94 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Darker Grotesque">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Circuit</title>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> e069d4fdce7052ac2301815a78d653d66dc6a230
 </head>
 
 <body>
-
     <div class="container">
         <header class="row valign-wrapper">
-            <div class="row col s12 m6 l6">
-                <h1 id="logo" class="white-text col s12 left-align">Circuit</h1>
+            <div class="left-align">
+                <img id="logomark" class="col s4 left-align" src="/assets/img/circuit-grey-1203.png">
             </div>
-            <div class="col s12 right-align">
-                <button id="create-task" class="red white-text" data-toggle="modal"
-                    data-target="#task-form-modal">Add Exercise
+            <div class="col s6 offset-6 right-align">
+                <button data-target="modal1" id="add-exercise" class="red white-text modal-trigger" data-toggle="modal"
+                    data-target="#exercise-modal">Add Exercise
                 </button>
-                <button id="remove-tasks" class="red white-text">Remove Exercises</button>
+                <button id="delete-exercises" class="red white-text">Remove Exercises</button>
             </div>
         </header>
+
         <main class="row">
             <div class="col s12">
-                <!-- todo start -->
+
                 <div class="col s12">
                     <h2 class="col s12">My Workouts </h2>
-                    <ul id="list-toDo" class="list-group"> </ul>
+                    <ul id="exercise-list" class="exercise-group"></ul>
                 </div>
-                <!-- todo end -->
+
             </div>
         </main>
-    </div>
 
-
-    <!-- Modal -->
-    <div class="modal fade" id="task-form-modal" tabindex="-1" role="dialog" aria-labelledby="task-form-modal"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="task-form-modal">New Exercise</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <!-- Timer -->
-                    <a data-type="countdown" data-name="Exercise Ends in:" data-bg_color="#ffffff"
-                        data-name_color="#000000" data-border_color="#888888" data-dt="2022-01-01 12:30:55"
-                        data-timezone="America/Chicago"
-                        style="display: block; width: 100%; position: relative; padding-bottom: 25%" class="tickcounter"
-                        href="//www.tickcounter.com">Countdown</a>
-                    <form>
-                        <div class="form-group">
-                            <label for="modalTaskDescription"></label>
-                            <textarea id="modalTaskDescription" placeholder="Execise Name" rows="3"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="modalTimer"></label>
-                            <input type="number" id="modalTimer" placeholder="Reps/Seconds" autocomplete="off" />
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button data-dismiss="modal">Cancel</button>
-                    <button class="button-primary">Add</button>
-                </div>
+                <h4>New Exercise</h4>
+                <label for="exercise">Live Exercise Search</label>
+                <input id="exercise" type="search" name="search" placeholder="Exercise Name">
+                <!-- <input id="exercise" type="search" placeholder="Exercise Name"> -->
+                <input id="duration" type="text" placeholder="Seconds">
+            </div>
+            <div class="modal-footer">
+                <a id="addButton" href="#!" class="modal-close waves-effect waves-green btn-flat">Add</a>
             </div>
         </div>
-    </div>
 
-<<<<<<< HEAD
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
-=======
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
->>>>>>> e069d4fdce7052ac2301815a78d653d66dc6a230
-
-
-    <script src="./assets/js/script.js"></script>
+        <script src="assets/js/circuit.js"></script>
+    </div>
 </body>
 
 </html>
