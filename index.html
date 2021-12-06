@@ -13,6 +13,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <div class="container">
 
         <!-- Header -->
@@ -60,6 +61,53 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
         <script src="assets/js/circuit.js"></script>
     </div>
-</body>
+=======
+    <div id="hero">
+        <img id="logo" src="assets/images/logo.png">
+        <h1 id="catch-phrase" class="white-text">Build your workout with Circuit</h1>
+    </div>
+    <div class="container">
+        <main class="row">
+                <div class="col s12">
+                    <h2>My Workout</h2>
+                </div>
+                <div id="menu" class="col s12">
+                        <button data-target="modal1" id="add-exercise" class="white-text modal-trigger" data-toggle="modal"
+                            data-target="#exercise-modal">Add Exercise
+                        </button>
+                        <button id="remove-exercises" class="white-text">Remove Exercises</button>
+                </div>
+                <div>
+                    <ul id="exercise-list"> </ul>
+                </div>
+        </main>
+    </div>
+    <div>
+        <div><img class="full-bleed" src="assets/images/homeworkout2.jpg" alt="Workout Anywhere"></div>
+    </div>
+    <div class="container">
+        <footer class="row valign-wrapper"> 
+            <div class="col s6"><h3 class="col s12 left-align">© 2021 Circuit</h3></div>
+            <div class="col s6"><h3 class="right-align">Los Angeles, CA</h3></div>
+        </footer>
+    </div>
 
+
+  <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>New Exercise</h4>
+            <input id="exercise" type="text" placeholder="Exercise Name">
+            <input id="duration" type="number" placeholder="Seconds">
+        </div>
+        <div class="modal-footer">
+        <a id="addButton" href="#!" class="modal-close waves-effect waves-green btn-flat">Add</a>
+        </div>
+    </div>
+          
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+        <script src="assets/js/circuit.js"></script>
+>>>>>>> 390b25bd3b0c21dda6e3d99700dddf864d10bff1
+</body>
 </html>
