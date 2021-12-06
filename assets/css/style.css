@@ -4,45 +4,116 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+@media only screen and (min-width: 720px) {
+
+  h1{
+    font-size: 5vw;
+  }
+  h2 {
+    font-size: 3vw;
+  }
+  h3{
+    font-size: 2vw;
+  }
+  #catchphrase {
+    font-size: ;
+  }
+  #logo {
+    width: 15vw;
+    height: auto;
+  }
+  button {
+    font-size: 2vw;
+  }
+
+}
+
 /** Body Selectors ***/
 body {
   font-family: "Darker Grotesque", sans-serif;
   background-color: black;
 }
-header {
-  max-height: 15%;
-  align-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+main {
+  min-height: 500px;
 }
-h2 {
-  font-weight: lighter;
-  color: whitesmoke;
-}
-li {
+
+footer{
+  height: 50px;
+  margin-top: 20px;
+  text-align: center;
   color: whitesmoke;
 }
 
-/** Elements **/
-.list-group-item {
-  background-color: #404040 !important;
+h2 {
+  font-weight: 200;
+  font-size: 6vw;
+  color: whitesmoke;
+  text-shadow: 4px 4px 8px rgb(0, 0, 0);
 }
-button#create-task {
+
+h3 {
+  font-size: 4vw;
+  flex-wrap: none;
+}
+
+button {
   font-family: "Darker Grotesque", sans-serif;
-  font-size: 1.25rem;
-  border: none;
-  border-radius: 20px;
-  padding: 10px;
+  font-size: 4vw;
+  border-radius: 10px;
+  font-family: inherit;
+  cursor: pointer;
   margin-right: 10px;
-  margin-bottom: 10px;
+  padding: 7.5px;
 }
-button#remove-tasks {
-  font-family: "Darker Grotesque", sans-serif;
-  font-size: 1.25rem;
-  border: none;
-  border-radius: 20px;
-  padding: 10px;
+
+/** Elements **/
+
+#hero {
+  background-image: url("../images/homeworkout.jpg");
+  background-size: cover;
+  height: 66vw;
 }
+
+.exercise-item {
+  background-color: #404040 !important;
+  color: whitesmoke;
+  border-radius: 10px;
+  padding: 20px;
+}
+
 #logo {
-  font-weight: bold;
+  width: 20vw;
+  height: auto;
+  margin: 20px;
+}
+button#add-exercise {
+  background-color: transparent;
+  border: 2px solid rgb(119, 216, 119)
+}
+
+button#remove-exercises {
+  background-color: transparent;
+  border: 2px solid rgb(216, 119, 119)
+}
+
+button#add-exercise:hover {
+  background-color: rgb(119, 216, 119);
+}
+
+button#remove-exercises:hover {
+  background-color: rgb(216, 119, 119);
+}
+
+#catch-phrase {
+  text-shadow: 4px 4px 8px black;
+  position: relative;
+  text-align: center;
+  vertical-align: center;
+  font-size: 8vw;
+  font-weight: 800;
+}
+.full-bleed {
+  width: 100%;
+  height: auto;
 }

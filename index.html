@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Darker Grotesque">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -13,30 +12,34 @@
 </head>
 
 <body>
-
+    <div id="hero">
+        <img id="logo" src="assets/images/logo.png">
+        <h1 id="catch-phrase" class="white-text">Build your workout with Circuit</h1>
+    </div>
     <div class="container">
-        <header class="row valign-wrapper">
-            <div class="left-align">
-                <!--<h1 id="logo" class="white-text col s12 left-align">Circuit</h1>-->
-                <img id="logomark" class="col s4 left-align" src="circuit-app-sample.png">
-            </div>
-            <div class="col s6 offset-6 right-align">
-                <button data-target="modal1" id="create-task" class="red white-text modal-trigger" data-toggle="modal"
-                    data-target="#task-form-modal">Add Exercise
-                </button>
-                <button id="remove-tasks" class="red white-text">Remove Exercises</button>
-            </div>
-        </header>
         <main class="row">
-            <div class="col s12">
-                <!-- todo start -->
                 <div class="col s12">
-                    <h2 class="col s12">My Workouts </h2>
-                    <ul id="exercise-list" class="list-group"> </ul>
+                    <h2>My Workout</h2>
                 </div>
-                <!-- todo end -->
-            </div>
+                <div id="menu" class="col s12">
+                        <button data-target="modal1" id="add-exercise" class="white-text modal-trigger" data-toggle="modal"
+                            data-target="#exercise-modal">Add Exercise
+                        </button>
+                        <button id="remove-exercises" class="white-text">Remove Exercises</button>
+                </div>
+                <div>
+                    <ul id="exercise-list"> </ul>
+                </div>
         </main>
+    </div>
+    <div>
+        <div><img class="full-bleed" src="assets/images/homeworkout2.jpg" alt="Workout Anywhere"></div>
+    </div>
+    <div class="container">
+        <footer class="row valign-wrapper"> 
+            <div class="col s6"><h3 class="col s12 left-align">© 2021 Circuit</h3></div>
+            <div class="col s6"><h3 class="right-align">Los Angeles, CA</h3></div>
+        </footer>
     </div>
 
 
@@ -50,44 +53,10 @@
         <div class="modal-footer">
         <a id="addButton" href="#!" class="modal-close waves-effect waves-green btn-flat">Add</a>
         </div>
-  </div>
+    </div>
           
-    <!-- Modal -->
-    <!-- <div class="modal fade" id="task-form-modal" tabindex="-1" role="dialog" aria-labelledby="task-form-modal"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="task-form-modal">New Exercise</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="modalTaskDescription"></label>
-                            <textarea id="modalTaskDescription" placeholder="Execise Name" rows="3"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="modalTimer"></label>
-                            <input type="number" id="modalTimer" placeholder="Reps/Seconds" autocomplete="off" />
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button data-dismiss="modal">Cancel</button>
-                    <button class="button-primary">Add</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
-        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
-        <!-- <script src="assets/js/script.js"></script> -->
         <script src="assets/js/circuit.js"></script>
-
+</body>
 </html>
