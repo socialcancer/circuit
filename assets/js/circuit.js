@@ -1,36 +1,38 @@
 
+
+
+
 $('#exercise').keyup(function () {
     //get value from search field
-    var searchField = $('#exercise').val();
+    // var searchField = $('#exercise').val();
 
-    var myExp = RegExp(searchField, "i");
+    // var myExp = RegExp(searchField, "i");
 
-    console.log(searchField);
-    // console.log(stopWatch);
+    // console.log(searchField);
+    // // console.log(stopWatch);
 
-    const exercise =
 
-        // //get JSON
-        $.getJSON('https://wger.de/api/v2/exercise.json', function (data) {
+    $.getJSON('https://wger.de/api/v2/exercise.json/?limit=10&language=2', function (data) {
 
-            var output = '<ul class = "search-results">';
+        var x = data.results;
 
-            $.each(data.results, function (index, item) {
-                if (item.name.search(myExp) != -1) {
-                    output += '<li>';
-                    output += '<h3>' + item.name + '</h3>';
-                    output += '</li>';
-                }
-            });
+        var output = '<ul class = "search-results">';
 
-            output += '</ul>'
-            console.log(output)
-
-            $('#exercise-list').append(output);
+        x.forEach(function (index, item) {
+            output += '<li>';
+            output += '<p>' + index.name + '</p>';
+            output += '</li>';
         });
+        output += '</ul>';
+        console.log(output);
 
+        //Append list to the bottom of the input id
+        $('#list-group').append(output);
+        $('#exercise-list').append(output);
+
+        localStorage.setItem('output', JSON.stringify(output));
+    });
 });
-
 
 
 //Modal
@@ -39,7 +41,7 @@ $('.modal').modal();
 //Timer function
 function makeTimer() {
 
-    //		var endTime = new Date("29 April 2018 9:56:00 GMT+01:00");	
+    //var endTime = new Date("29 April 2018 9:56:00 GMT+01:00");	
     var endTime = new Date("29 April 2020 9:56:00 GMT+01:00");
     endTime = (Date.parse(endTime) / 1000);
 
